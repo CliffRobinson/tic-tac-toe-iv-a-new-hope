@@ -1,3 +1,8 @@
+# tic-tac-toe-iv-a-new-hope
+working from https://github.com/test-er-8-or/tic-tac-toe with a view to learning full enzyme coverage. This will be the forth time I've made noughts and crosses.
+
+# create-react-app stuff
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
