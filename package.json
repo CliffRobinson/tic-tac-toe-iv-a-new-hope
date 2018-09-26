@@ -12,9 +12,20 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "format": "prettier-standard \"src/**/*.js\"",
-    "eject": "react-scripts eject"    
+    "precommit": "lint-staged",
+    "eject": "react-scripts eject"
+  },
+  "lint-staged": {
+    "linters": {
+      "src/**/*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
   },
   "devDependencies": {
+    "husky": "^1.0.0",
+    "lint-staged": "^7.3.0",
     "prettier-standard": "^8.0.1"
   }
 }
