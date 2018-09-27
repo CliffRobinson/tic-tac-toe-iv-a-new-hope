@@ -1,14 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 import { times } from 'ramda'
+import { isUndefined } from 'ramda-adjunct'
 
 import { Board, Square } from '..'
+import { getPlayer } from '../../utilities'
 
-const makeSquares = n =>
-  times(
-    idx => <Square key={idx} index={idx} player={idx % 2 === 0 ? 'x' : 'o'} />,
-    n
-  )
+function makeSquares (moves, n) {
+  return times(squareNum => {
+    const player = getPlayer(squareNum, moves)
+
+    return isUndefined(player) ? (
+      <Square
+        key={squareNum}
+        index={squareNum}
+        handleClick={/* I am stub */ () => console.log(`Butts: ${squareNum}`)}
+      />
+    ) : (
+      <Square key={squareNum} index={squareNum} player={player} />
+    )
+  }, n)
+}
 
 const StyledApp = styled.div`
   display: grid;
@@ -21,32 +33,10 @@ const StyledApp = styled.div`
 `
 StyledApp.displayName = 'StyledApp'
 
-export default function App () {
+export default function App ({ moves = [] }) {
   return (
     <StyledApp>
-      <Board>{makeSquares(9)}</Board>
+      <Board>{makeSquares(moves, 9)}</Board>
     </StyledApp>
   )
 }
-
-// import React, { Component } from 'react'
-// import logo from './logo.svg'
-// import './App.css'
-
-// class App extends Component {
-//   render () {
-//     return (
-//       <div className='App'>
-//         <header className='App-header'>
-//           <img src={logo} className='App-logo' alt='logo' />
-//           <h1 className='App-title'>Welcome to React</h1>
-//         </header>
-//         <p className='App-intro'>
-//           To get started, edit <code>src/App.js</code> and save to reload.
-//         </p>
-//       </div>
-//     )
-//   }
-// }
-
-// export default App
