@@ -37,7 +37,9 @@ exports[`components:Square renders the Square with the proper styles for player 
 <div
   className="c0"
 >
+   
   o
+   
 </div>
 `;
 
@@ -58,7 +60,9 @@ exports[`components:Square renders the Square with the proper styles for player 
 <div
   className="c0"
 >
+   
   x
+   
 </div>
 `;
 
@@ -79,7 +83,9 @@ exports[`components:Square renders the Square with the proper styles for player 
 <div
   className="c0"
 >
+   
   x
+   
 </div>
 `;
 
@@ -100,7 +106,9 @@ exports[`components:Square renders the Square with the proper styles for player 
 <div
   className="c0"
 >
+   
   x
+   
 </div>
 `;
 
@@ -121,6 +129,8 @@ exports[`components:Square renders the Square with the proper styles for player 
 <div
   className="c0"
 >
+   
   x
+   
 </div>
 `;

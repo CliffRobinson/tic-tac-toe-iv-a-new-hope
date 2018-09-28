@@ -1,26 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { times } from 'ramda'
-import { isUndefined } from 'ramda-adjunct'
+import { connect } from 'react-redux'
 
-import { Board, Square } from '..'
-import { getPlayer } from '../../utilities'
-
-function makeSquares (moves, n) {
-  return times(squareNum => {
-    const player = getPlayer(squareNum, moves)
-
-    return isUndefined(player) ? (
-      <Square
-        key={squareNum}
-        index={squareNum}
-        handleClick={/* I am stub */ () => console.log(`Butts: ${squareNum}`)}
-      />
-    ) : (
-      <Square key={squareNum} index={squareNum} player={player} />
-    )
-  }, n)
-}
+import { Board } from '..'
+import { Square } from '../../containers'
+import { getMoves, squareClicked } from '../../state'
 
 const StyledApp = styled.div`
   display: grid;
@@ -33,10 +18,12 @@ const StyledApp = styled.div`
 `
 StyledApp.displayName = 'StyledApp'
 
-export default function App ({ moves = [] }) {
+export default function App () {
   return (
     <StyledApp>
-      <Board>{makeSquares(moves, 9)}</Board>
+      <Board>
+        {times(squareNum => <Square key={squareNum} index={squareNum} />, 9)}
+      </Board>
     </StyledApp>
   )
 }
