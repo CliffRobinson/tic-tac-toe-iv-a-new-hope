@@ -10,4 +10,22 @@ describe('state:selectors', () => {
       expect(getMoves(state)).toBe(moves)
     })
   })
+
+  describe('getWinningPlayer', () => {
+    it('extracts the winning player from state', () => {
+      const winningPlayer = 'x'
+      const state = { winningPlayer }
+
+      expect(getWinningPlayer(state)).toBe(winningPlayer)
+    })
+  })
+
+  describe('getWinningSquares', () => {
+    it('extracts the winning squares from state', () => {
+      const winningSquares = [0, 3, 6]
+      const state = { winningSquares }
+
+      expect(getWinningSquares(state)).toBe(winningSquares)
+    })
+  })
 })
