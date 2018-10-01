@@ -1,6 +1,6 @@
 // src/state/actions/index.js
 
-import { SQUARE_CLICKED } from '..'
+import { GAME_OVER, SQUARE_CLICKED } from '../constants'
 
 function squareClicked (square) {
   return {
@@ -11,4 +11,16 @@ function squareClicked (square) {
   }
 }
 
-export { squareClicked }
+function gameOver (squares, player) {
+  return {
+    type: GAME_OVER,
+    payload: {
+      winners: {
+        squares,
+        player
+      }
+    }
+  }
+}
+
+export { gameOver, squareClicked }
