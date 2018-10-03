@@ -39,4 +39,24 @@ describe('components:Square', () => {
       toJson(shallow(<Square player='x' index={8} />).dive())
     ).toMatchSnapshot()
   })
+
+  it('renders the square with the proper styles for player x win', () => {
+    expect(
+      toJson(shallow(<Square index={4} isWinningSquare={false} />).dive())
+    ).toMatchSnapshot()
+  })
+
+  it('renders the Square with the proper styles for a player o loss', () => {
+    expect(
+      toJson(
+        shallow(<Square player='o' index={8} isWinningSquare={false} />).dive()
+      )
+    ).toMatchSnapshot()
+  })
+
+  it('renders the square with proper styles for an unplayed square after game over', () => {
+    expect(
+      toJson(shallow(<Square index={4} isWinningSquare={false} />).dive())
+    ).toMatchSnapshot()
+  })
 })

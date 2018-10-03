@@ -1,5 +1,5 @@
 // src/state/selectors/index.spec.js
-import { getMoves } from '.'
+import { getMoves, getWinningPlayer, getWinningSquares } from '.'
 
 describe('state:selectors', () => {
   describe('getMoves', () => {

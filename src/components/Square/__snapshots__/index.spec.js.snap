@@ -5,13 +5,13 @@ exports[`components:Square renders the Square with the proper cursor if a click 
   border-color: hsla(0,0%,0%,0.2);
   border-style: solid;
   border-width: 0 2px 2px 0;
-  color: gold;
   cursor: pointer;
   font-size: 16vh;
   font-weight: bold;
   line-height: 20vh;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 <div
@@ -20,26 +20,45 @@ exports[`components:Square renders the Square with the proper cursor if a click 
 />
 `;
 
-exports[`components:Square renders the Square with the proper styles for player O in the top left square 1`] = `
+exports[`components:Square renders the Square with the proper styles for a player o loss 1`] = `
 .c0 {
   border-color: hsla(0,0%,0%,0.2);
   border-style: solid;
-  border-width: 0 2px 2px 0;
-  color: gold;
+  border-width: 0 0 0 0;
   cursor: default;
   font-size: 16vh;
   font-weight: bold;
   line-height: 20vh;
   text-align: center;
   text-transform: uppercase;
+  color: hsla(0,0%,90%,1);
 }
 
 <div
   className="c0"
 >
-   
   o
-   
+</div>
+`;
+
+exports[`components:Square renders the Square with the proper styles for player O in the top left square 1`] = `
+.c0 {
+  border-color: hsla(0,0%,0%,0.2);
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  cursor: default;
+  font-size: 16vh;
+  font-weight: bold;
+  line-height: 20vh;
+  text-align: center;
+  text-transform: uppercase;
+  color: gold;
+}
+
+<div
+  className="c0"
+>
+  o
 </div>
 `;
 
@@ -48,21 +67,19 @@ exports[`components:Square renders the Square with the proper styles for player 
   border-color: hsla(0,0%,0%,0.2);
   border-style: solid;
   border-width: 0 2px 0 0;
-  color: blue;
   cursor: default;
   font-size: 16vh;
   font-weight: bold;
   line-height: 20vh;
   text-align: center;
   text-transform: uppercase;
+  color: blue;
 }
 
 <div
   className="c0"
 >
-   
   x
-   
 </div>
 `;
 
@@ -71,21 +88,19 @@ exports[`components:Square renders the Square with the proper styles for player 
   border-color: hsla(0,0%,0%,0.2);
   border-style: solid;
   border-width: 0 0 0 0;
-  color: blue;
   cursor: default;
   font-size: 16vh;
   font-weight: bold;
   line-height: 20vh;
   text-align: center;
   text-transform: uppercase;
+  color: blue;
 }
 
 <div
   className="c0"
 >
-   
   x
-   
 </div>
 `;
 
@@ -94,21 +109,19 @@ exports[`components:Square renders the Square with the proper styles for player 
   border-color: hsla(0,0%,0%,0.2);
   border-style: solid;
   border-width: 0 2px 2px 0;
-  color: blue;
   cursor: default;
   font-size: 16vh;
   font-weight: bold;
   line-height: 20vh;
   text-align: center;
   text-transform: uppercase;
+  color: blue;
 }
 
 <div
   className="c0"
 >
-   
   x
-   
 </div>
 `;
 
@@ -117,7 +130,27 @@ exports[`components:Square renders the Square with the proper styles for player 
   border-color: hsla(0,0%,0%,0.2);
   border-style: solid;
   border-width: 0 0 2px 0;
+  cursor: default;
+  font-size: 16vh;
+  font-weight: bold;
+  line-height: 20vh;
+  text-align: center;
+  text-transform: uppercase;
   color: blue;
+}
+
+<div
+  className="c0"
+>
+  x
+</div>
+`;
+
+exports[`components:Square renders the square with proper styles for an unplayed square after game over 1`] = `
+.c0 {
+  border-color: hsla(0,0%,0%,0.2);
+  border-style: solid;
+  border-width: 0 2px 2px 0;
   cursor: default;
   font-size: 16vh;
   font-weight: bold;
@@ -128,9 +161,23 @@ exports[`components:Square renders the Square with the proper styles for player 
 
 <div
   className="c0"
->
-   
-  x
-   
-</div>
+/>
+`;
+
+exports[`components:Square renders the square with the proper styles for player x win 1`] = `
+.c0 {
+  border-color: hsla(0,0%,0%,0.2);
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  cursor: default;
+  font-size: 16vh;
+  font-weight: bold;
+  line-height: 20vh;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+<div
+  className="c0"
+/>
 `;
