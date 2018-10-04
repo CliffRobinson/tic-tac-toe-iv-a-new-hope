@@ -31,6 +31,10 @@ const SquarePlayable = StyledSquare.extend`
   cursor: pointer;
 `
 
+SquareLost.displayName = 'SquareLost'
+SquarePlayed.displayName = 'SquarePlayed'
+SquarePlayable.displayName = 'SquarePlayable'
+
 export default function Square ({
   handleClick,
   index,
