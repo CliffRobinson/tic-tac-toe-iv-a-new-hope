@@ -58,7 +58,7 @@
       "!src/containers/index.js",
       "!src/state/index.js",
       "src/**/*.{js, jsx}",
-      "!<rootDir>/node_modules"      
+      "!<rootDir>/node_modules"
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
