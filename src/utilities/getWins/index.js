@@ -18,7 +18,7 @@ export default function getWins (board) {
     const [s1, s2, s3] = pattern
 
     return (
-      Boolean(board[s1]) && board[s1] == board[s2] && board[s2] === board[s3]
+      Boolean(board[s1]) && board[s1] === board[s2] && board[s2] === board[s3]
     )
   }, patterns)
 }

@@ -42,7 +42,7 @@ describe('components:Square', () => {
 
   it('renders the square with the proper styles for player x win', () => {
     expect(
-      toJson(shallow(<Square index={4} isWinningSquare={false} />).dive())
+      toJson(shallow(<Square player='x' index={8} isWinningSquare />).dive())
     ).toMatchSnapshot()
   })
 

@@ -9,8 +9,8 @@ const StyledSquare = styled.div`
   border-style: solid;
   border-width: 0 ${({ index }) => (index % 3 === 2 ? 0 : '2px')}
     ${({ index }) => (index < 6 ? '2px' : 0)} 0;
-  
-  cursor: ${({ onClick }) => (isUndefined(onClick) ? 'default' : 'pointer')}
+
+  cursor: default;
   font-size: 16vh;
   font-weight: bold;
   line-height: 20vh;
@@ -18,7 +18,7 @@ const StyledSquare = styled.div`
   text-transform: uppercase;
 `
 
-StyledSquare.displayName = 'StyledSquare'
+StyledSquare.defaultName = 'StyledSquare'
 
 const SquarePlayed = StyledSquare.extend`
   color: ${({ player }) => (player === 'x' ? 'blue' : 'gold')};
@@ -31,9 +31,9 @@ const SquarePlayable = StyledSquare.extend`
   cursor: pointer;
 `
 
-SquareLost.displayName = 'SquareLost'
-SquarePlayed.displayName = 'SquarePlayed'
-SquarePlayable.displayName = 'SquarePlayable'
+SquareLost.defaultName = 'SquareLost'
+SquarePlayed.defaultName = 'SquarePlayed'
+SquarePlayable.defaultName = 'SquarePlayable'
 
 export default function Square ({
   handleClick,
