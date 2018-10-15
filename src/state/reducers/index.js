@@ -12,6 +12,8 @@ function rootReducer (state = initialState, { payload = {}, type }) {
 
   switch (type) {
     case GAME_OVER:
+      console.log('game over action received')
+      console.log(payload)
       return {
         ...state,
         winningSquares: squares,
